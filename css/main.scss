@@ -1,0 +1,63 @@
+* {
+    border: none;
+    margin: 0;
+    padding: 0;
+    background-color: grey;
+    color: lightgray;
+}
+
+//Mixins
+@mixin fontSizeMedium {
+    font-size: 24px;
+    
+}
+@mixin fontSizeBold {
+    font-size: 28px;
+    
+}
+
+.container {
+    // width: 1440px;
+    width: 100%; // potom ubrat`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+
+    .navbar {
+
+        display: flex;
+        align-items: center;
+        width: 1215px;
+        height: 81px;
+        justify-content: space-around;
+
+        p {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .links {
+            display: flex;
+
+            a {
+                margin-right: 40px;
+                display: flex;
+                align-items: center;
+
+                img {
+                    margin-left: 7px;
+                }
+
+                text-decoration: none;
+            }
+
+            a:hover {
+                color: goldenrod;
+                img {
+                    
+                }
+            }
+        }
+    }
+}
