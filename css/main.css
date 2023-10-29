@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   border: none;
   margin: 0;
@@ -16,59 +17,61 @@
   justify-content: center;
   margin: 0 auto;
 }
-.container .navbar {
+
+.navbar {
   display: flex;
   align-items: center;
   width: 1215px;
   height: 81px;
   justify-content: space-between;
 }
-.container .navbar p {
+.navbar p {
   font-size: 28px;
   font-weight: bold;
 }
-.container .navbar .links {
+.navbar .links {
   display: flex;
 }
-.container .navbar .links a {
+.navbar .links a {
   margin-left: 40px;
   display: flex;
   align-items: center;
   font-size: 18px;
   text-decoration: none;
 }
-.container .navbar .links a img {
+.navbar .links a img {
   margin-left: 7px;
 }
-.container .navbar .links a:hover {
+.navbar .links a:hover {
   color: #FF8A56;
   transition: 0.5s;
   text-shadow: 2px 2px 15px goldenrod;
   cursor: pointer;
 }
-.container header {
+
+header {
   display: flex;
   align-items: center;
   width: 1215px;
   margin-top: 85px;
 }
-.container header .headerLeft h1 {
+header .headerLeft h1 {
   color: #FF8A56;
   font-size: 72px;
 }
-.container header .headerLeft h2 {
+header .headerLeft h2 {
   font-size: 72px;
   margin-bottom: 15px;
 }
-.container header .headerLeft p {
+header .headerLeft p {
   font-size: 22px;
   margin-bottom: 20px;
 }
-.container header .headerLeft .headerButtons {
+header .headerLeft .headerButtons {
   display: flex;
   align-items: center;
 }
-.container header .headerLeft .headerButtons .book {
+header .headerLeft .headerButtons .book {
   width: 160px;
   height: 58px;
   border: 0 solid #000;
@@ -80,7 +83,7 @@
   cursor: pointer;
   margin-right: 40px;
 }
-.container header .headerLeft .headerButtons .book:hover {
+header .headerLeft .headerButtons .book:hover {
   width: 160px;
   height: 58px;
   border: 0 solid #000;
@@ -91,7 +94,7 @@
   transition: 0.5s;
   cursor: pointer;
 }
-.container header .headerLeft .headerButtons .CV {
+header .headerLeft .headerButtons .CV {
   width: 160px;
   height: 58px;
   border: 0 solid #000;
@@ -103,7 +106,7 @@
   cursor: pointer;
   background-color: grey;
 }
-.container header .headerLeft .headerButtons .CV:hover {
+header .headerLeft .headerButtons .CV:hover {
   width: 160px;
   height: 58px;
   border: 0 solid #000;
@@ -114,12 +117,13 @@
   transition: 0.5s;
   cursor: pointer;
 }
-.container header .headerLeft .headerButtons img {
+header .headerLeft .headerButtons img {
   width: 14px;
   height: 14px;
   padding-left: 24px;
 }
-.container .sponsors {
+
+.sponsors {
   width: 1000px;
   height: 252px;
   display: flex;
@@ -127,13 +131,84 @@
   align-items: center;
   justify-content: center;
 }
-.container .sponsors .title {
+.sponsors .title {
   padding-bottom: 45px;
   font-size: 18px;
 }
-.container .sponsors img {
+.sponsors img {
   margin-left: 100px;
 }
-.container .sponsors #fisrtItem {
+.sponsors #fisrtItem {
   margin-left: 0;
+}
+
+.services {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.services .services_title {
+  width: 810px;
+  margin-bottom: 115px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.services .services_title .title {
+  color: #FF5E69;
+  font-size: 22px;
+  letter-spacing: 4px;
+  font-weight: bold;
+  margin: 80px 0 16px;
+}
+.services .services_title .text {
+  text-align: center;
+  font-size: 54px;
+}
+.services .info {
+  display: flex;
+  width: 1098px;
+  justify-content: space-between;
+  align-items: start;
+}
+.services .info .block {
+  width: 306px;
+  height: 381px;
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-start; */
+  justify-content: initial;
+}
+.services .info .block .logo {
+  margin-bottom: 30px;
+}
+.services .info .block h1 {
+  margin-bottom: 25px;
+  font-size: 24px;
+}
+.services .info .block .subtext {
+  margin-bottom: 22px;
+  line-height: 28px;
+}
+.services .info .block ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.services .info .block li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 10px;
+}
+.services .info .block li:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 7px;
+  height: 7px;
+  background-color: #000; /* цвет квадрата */
 }/*# sourceMappingURL=main.css.map */
