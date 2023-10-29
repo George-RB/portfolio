@@ -4,22 +4,41 @@
     padding: 0;
     background-color: grey;
     color: lightgray;
+    font-family: 'Roboto', sans-serif;
+    cursor: default;
 }
 
 //Mixins
-@mixin fontSizeMedium {
-    font-size: 24px;
-    
+@mixin orangeColor {
+    color: #FF8A56;
 }
-@mixin fontSizeBold {
-    font-size: 28px;
-    
+
+@mixin hoverOrangeEffect {
+    @include orangeColor;
+    transition: 0.5s;
+    text-shadow: 2px 2px 15px goldenrod;
+    cursor: pointer;
+
 }
+
+@mixin blackButton {
+    width: 160px;
+    height: 58px;
+    border: 0 solid #000;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
 
 .container {
     // width: 1440px;
     width: 100%; // potom ubrat`
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     margin: 0 auto;
@@ -30,7 +49,7 @@
         align-items: center;
         width: 1215px;
         height: 81px;
-        justify-content: space-around;
+        justify-content: space-between;
 
         p {
             font-size: 28px;
@@ -40,10 +59,12 @@
         .links {
             display: flex;
 
+            // height: 28px;
             a {
-                margin-right: 40px;
+                margin-left: 40px;
                 display: flex;
                 align-items: center;
+                font-size: 18px;
 
                 img {
                     margin-left: 7px;
@@ -53,11 +74,94 @@
             }
 
             a:hover {
-                color: goldenrod;
+                @include hoverOrangeEffect;
+            }
+
+        }
+    }
+
+    header {
+        display: flex;
+        align-items: center;
+        width: 1215px;
+        margin-top: 85px;
+
+        .headerLeft {
+            h1 {
+                @include orangeColor;
+                font-size: 72px;
+            }
+
+            h2 {
+                font-size: 72px;
+                margin-bottom: 15px;
+
+            }
+
+            p {
+                font-size: 22px;
+                margin-bottom: 20px;
+            }
+
+            .headerButtons {
+                display: flex;
+                align-items: center;
+
+
+
+                .book {
+                    @include blackButton;
+                    margin-right: 40px;
+                    // background-color: grey;
+                }
+
+                .book:hover {
+                    @include blackButton;
+
+                }
+
+
+                .CV {
+                    @include blackButton;
+                    background-color: grey;
+                }
+
+                .CV:hover {
+                    @include blackButton;
+
+                }
+
+
                 img {
-                    
+                    width: 14px;
+                    height: 14px;
+                    padding-left: 24px;
                 }
             }
         }
     }
+
+    .sponsors {
+        width: 1000px;
+        height: 252px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .title {
+            padding-bottom: 45px;
+            font-size: 18px;
+        }
+
+        img {
+            margin-left: 100px;
+        }
+
+        #fisrtItem {
+            margin-left: 0; // Ужасный костыль, нужно узнать как сделать этот трюк нормально
+        }
+    }
+
+
 }

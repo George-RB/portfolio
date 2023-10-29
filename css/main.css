@@ -4,11 +4,14 @@
   padding: 0;
   background-color: grey;
   color: lightgray;
+  font-family: "Roboto", sans-serif;
+  cursor: default;
 }
 
 .container {
   width: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   margin: 0 auto;
@@ -18,7 +21,7 @@
   align-items: center;
   width: 1215px;
   height: 81px;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 .container .navbar p {
   font-size: 28px;
@@ -28,14 +31,109 @@
   display: flex;
 }
 .container .navbar .links a {
-  margin-right: 40px;
+  margin-left: 40px;
   display: flex;
   align-items: center;
+  font-size: 18px;
   text-decoration: none;
 }
 .container .navbar .links a img {
   margin-left: 7px;
 }
 .container .navbar .links a:hover {
-  color: goldenrod;
+  color: #FF8A56;
+  transition: 0.5s;
+  text-shadow: 2px 2px 15px goldenrod;
+  cursor: pointer;
+}
+.container header {
+  display: flex;
+  align-items: center;
+  width: 1215px;
+  margin-top: 85px;
+}
+.container header .headerLeft h1 {
+  color: #FF8A56;
+  font-size: 72px;
+}
+.container header .headerLeft h2 {
+  font-size: 72px;
+  margin-bottom: 15px;
+}
+.container header .headerLeft p {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+.container header .headerLeft .headerButtons {
+  display: flex;
+  align-items: center;
+}
+.container header .headerLeft .headerButtons .book {
+  width: 160px;
+  height: 58px;
+  border: 0 solid #000;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s;
+  cursor: pointer;
+  margin-right: 40px;
+}
+.container header .headerLeft .headerButtons .book:hover {
+  width: 160px;
+  height: 58px;
+  border: 0 solid #000;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.container header .headerLeft .headerButtons .CV {
+  width: 160px;
+  height: 58px;
+  border: 0 solid #000;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s;
+  cursor: pointer;
+  background-color: grey;
+}
+.container header .headerLeft .headerButtons .CV:hover {
+  width: 160px;
+  height: 58px;
+  border: 0 solid #000;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.container header .headerLeft .headerButtons img {
+  width: 14px;
+  height: 14px;
+  padding-left: 24px;
+}
+.container .sponsors {
+  width: 1000px;
+  height: 252px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.container .sponsors .title {
+  padding-bottom: 45px;
+  font-size: 18px;
+}
+.container .sponsors img {
+  margin-left: 100px;
+}
+.container .sponsors #fisrtItem {
+  margin-left: 0;
 }/*# sourceMappingURL=main.css.map */
