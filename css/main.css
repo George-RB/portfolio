@@ -3,7 +3,6 @@
   border: none;
   margin: 0;
   padding: 0;
-  background-color: grey;
   color: lightgray;
   font-family: "Roboto", sans-serif;
   cursor: default;
@@ -16,6 +15,7 @@
   align-items: center;
   justify-content: center;
   margin: 0 auto;
+  flex-wrap: wrap;
 }
 
 .navbar {
@@ -54,6 +54,9 @@ header {
   align-items: center;
   width: 1215px;
   margin-top: 85px;
+  flex-basis: 100px;
+  flex-grow: 1;
+  flex-shrink: 1;
 }
 header .headerLeft h1 {
   color: #FF8A56;
@@ -158,14 +161,16 @@ header .headerLeft .headerButtons img {
 }
 .services .services_title .title {
   color: #FF5E69;
+  margin: 80px 0 16px;
   font-size: 22px;
   letter-spacing: 4px;
   font-weight: bold;
-  margin: 80px 0 16px;
+  text-transform: uppercase;
 }
 .services .services_title .text {
   text-align: center;
   font-size: 54px;
+  font-weight: bold;
 }
 .services .info {
   display: flex;
@@ -210,5 +215,82 @@ header .headerLeft .headerButtons img {
   transform: translateY(-50%);
   width: 7px;
   height: 7px;
-  background-color: #000; /* цвет квадрата */
+  background-color: #000;
+  /* цвет квадрата */
+}
+
+.projects {
+  width: 1215px;
+  margin-top: 80px;
+}
+.projects .project_item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 100px;
+}
+.projects .projects_title {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.projects .title {
+  color: #B16CEA;
+  font-weight: bold;
+  font-size: 22px;
+  letter-spacing: 4px;
+  margin-bottom: 25px;
+}
+.projects .text {
+  font-size: 54px;
+  font-weight: bold;
+}
+.projects .button {
+  width: 160px;
+  height: 58px;
+  border: 0 solid #000;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.projects .page-title {
+  text-align: center;
+}
+.projects .slider-container {
+  position: relative;
+  width: 600px;
+  height: 400px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.projects .slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+.projects .slider img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.projects .prev-button,
+.projects .next-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  color: white;
+}
+.projects .prev-button {
+  left: 10px;
+}
+.projects .next-button {
+  right: 10px;
 }/*# sourceMappingURL=main.css.map */
