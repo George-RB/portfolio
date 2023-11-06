@@ -422,4 +422,48 @@ header .headerLeft .headerButtons img {
 }
 .product .productPictures .design_4 {
   grid-area: layer;
+}
+
+.education {
+  margin-top: 160px;
+  width: 1215px;
+  display: grid;
+  grid-template: repeat(1, 1fr)/repeat(2, 1fr);
+  grid-gap: 50px;
+}
+.education .educationInfo {
+  width: 583px;
+}
+.education .educationInfo .educationSchool {
+  height: 94px;
+  border-bottom: 1px solid #555;
+  display: grid;
+  grid-template: repeat(2, 1fr)/repeat(2, 1fr);
+  grid-template-areas: "title subtitle" "text subtext";
+  align-items: stretch;
+  justify-items: start;
+  margin-bottom: 35px;
+}
+.education .educationInfo .educationTitle {
+  font-size: 36px;
+  color: #000;
+  padding-bottom: 85px;
+  grid-area: title;
+}
+.education .educationInfo .schoolTitle {
+  font-size: 24px;
+  font-weight: bold;
+  color: #000;
+  padding-bottom: 9px;
+}
+.education .educationInfo .schoolSubtitle {
+  color: #000;
+  opacity: 0.6;
+  grid-area: text;
+}
+.education .educationInfo .schoolYear {
+  grid-area: subtext;
+  color: #000;
+  opacity: 0.6;
+  justify-self: end;
 }/*# sourceMappingURL=main.css.map */

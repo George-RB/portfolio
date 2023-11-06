@@ -486,19 +486,77 @@ header {
         width: 1215px;
         margin: 0 auto;
         grid-template-areas: "img pic block"
-                            "img pic layer";
+            "img pic layer";
 
         .design_1 {
             grid-area: img;
         }
+
         .design_2 {
             grid-area: pic;
         }
+
         .design_3 {
             grid-area: block;
         }
+
         .design_4 {
             grid-area: layer;
+        }
+    }
+}
+
+// Education
+.education {
+    margin-top: 160px;
+    width: 1215px;
+
+    display: grid;
+    grid-template: repeat(1, 1fr)/repeat(2, 1fr);
+    grid-gap: 50px;
+
+    .educationInfo {
+        width: 583px;
+
+        .educationSchool {
+            height: 94px;
+            border-bottom: 1px solid #555;
+            display: grid;
+            grid-template: repeat(2, 1fr)/repeat(2, 1fr);
+            grid-template-areas: "title subtitle"
+                "text subtext";
+            align-items: stretch;
+            justify-items: start;
+            margin-bottom: 35px;
+
+        }
+
+        .educationTitle {
+            font-size: 36px;
+            color: #000;
+            padding-bottom: 85px;
+            grid-area: title;
+        }
+
+        .schoolTitle {
+            font-size: 24px;
+            font-weight: bold;
+            color: #000;
+            padding-bottom: 9px;
+        }
+
+        .schoolSubtitle {
+            color: #000;
+            opacity: 0.6;
+            grid-area: text;
+        }
+
+        .schoolYear {
+            grid-area: subtext;
+            color: #000;
+            opacity: 0.6;
+            justify-self: end;
+
         }
     }
 }
