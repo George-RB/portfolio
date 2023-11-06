@@ -367,4 +367,59 @@ header .headerLeft .headerButtons img {
   transition: 0.5s;
   text-shadow: 2px 2px 15px goldenrod;
   cursor: pointer;
+}
+
+.product {
+  width: 1440px;
+}
+.product .product_item {
+  width: 1215px;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
+.product .product_item .button {
+  width: 620px;
+  height: 120px;
+  line-height: 40px;
+  font-size: 22px;
+  color: #666666;
+}
+.product .product_title {
+  width: 590px;
+  margin-bottom: 115px;
+}
+.product .product_title .title {
+  color: #FF5E69;
+  margin: 80px 0 16px;
+  font-size: 22px;
+  letter-spacing: 4px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.product .product_title .text {
+  font-size: 54px;
+  font-weight: bold;
+  color: #000;
+}
+.product .productPictures {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 10px;
+  width: 1215px;
+  margin: 0 auto;
+  grid-template-areas: "img pic block" "img pic layer";
+}
+.product .productPictures .design_1 {
+  grid-area: img;
+}
+.product .productPictures .design_2 {
+  grid-area: pic;
+}
+.product .productPictures .design_3 {
+  grid-area: block;
+}
+.product .productPictures .design_4 {
+  grid-area: layer;
 }/*# sourceMappingURL=main.css.map */
