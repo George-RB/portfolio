@@ -43,13 +43,22 @@
 .container {
     // width: 1440px;
     width: 100%; // potom ubrat`
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin: 0 auto;
     flex-wrap: wrap;
-    background-color: #777;
+    // background-color: linear ;
+    // background-image: linear-gradient(gray, yellow);
+    background: 
+    repeating-radial-gradient(
+      circle at 0 0, 
+      rgb(150, 150, 150),
+      rgb(121, 121, 121) 50px
+    );
+    
 }
 
 //Navbar
@@ -558,5 +567,63 @@ header {
             justify-self: end;
 
         }
+    }
+}
+
+// Testimonials
+.testimonials {
+
+    .titleBlock {
+        margin-top: 195px;
+        width: 1215px;
+
+        .title {
+            color: #4353FF;
+            font-weight: bold;
+            font-size: 22px;
+            letter-spacing: 4px;
+            padding-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .subtitle {
+            color: #000;
+            font-weight: bold;
+            font-size: 54px;
+            letter-spacing: 1px;
+        }
+    }
+
+    .sliderMenu {
+        width: 1215px;
+        height: 450px;
+        margin-top: 80px;
+        display: grid;
+        grid-template: repeat(4, auto)/repeat(2, 1fr);
+        grid-template-areas:
+            "pic quote"
+            "pic text"
+            "pic block"
+            "pic block";
+    }
+
+    .picture {
+        grid-area: pic;
+    }
+
+    .quote {
+        grid-area: quote;
+    }
+
+    .text {
+        grid-area: text;
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 47px;
+        color: #000;
+    }
+
+    .authorBlock {
+        grid-area: block;
     }
 }
