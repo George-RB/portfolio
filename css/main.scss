@@ -52,13 +52,11 @@
     flex-wrap: wrap;
     // background-color: linear ;
     // background-image: linear-gradient(gray, yellow);
-    background: 
-    repeating-radial-gradient(
-      circle at 0 0, 
-      rgb(150, 150, 150),
-      rgb(121, 121, 121) 50px
-    );
-    
+    background:
+        repeating-radial-gradient(circle at 0 0,
+            rgb(150, 150, 150),
+            rgb(121, 121, 121) 50px);
+
 }
 
 //Navbar
@@ -626,4 +624,36 @@ header {
     .authorBlock {
         grid-area: block;
     }
+}
+
+// FAQ
+.faq {
+    width: 1440px;
+    background-color: #000;
+    margin-top: 160px;
+    height: 100%;
+
+    .faqBlock {
+        width: 1215px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .title {
+            padding-top: 60px;
+            padding-bottom: 20px;
+            color: #FF8A56;
+            font-weight: bold;
+            font-size: 22px;
+            letter-spacing: 4px;
+        }
+        .subtitle {
+            font-size: 54px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+    }
+
 }

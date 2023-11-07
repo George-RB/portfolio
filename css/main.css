@@ -510,4 +510,32 @@ header .headerLeft .headerButtons img {
 }
 .testimonials .authorBlock {
   grid-area: block;
+}
+
+.faq {
+  width: 1440px;
+  background-color: #000;
+  margin-top: 160px;
+  height: 100%;
+}
+.faq .faqBlock {
+  width: 1215px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.faq .faqBlock .title {
+  padding-top: 60px;
+  padding-bottom: 20px;
+  color: #FF8A56;
+  font-weight: bold;
+  font-size: 22px;
+  letter-spacing: 4px;
+}
+.faq .faqBlock .subtitle {
+  font-size: 54px;
+  font-weight: bold;
+  letter-spacing: 1px;
 }/*# sourceMappingURL=main.css.map */
