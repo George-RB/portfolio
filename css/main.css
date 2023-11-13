@@ -8,6 +8,15 @@
   cursor: default;
 }
 
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+p {
+  margin: 0 0 5px;
+}
+
 .container {
   width: 100%;
   height: 100%;
@@ -17,7 +26,7 @@
   justify-content: center;
   margin: 0 auto;
   flex-wrap: wrap;
-  background: repeating-radial-gradient(circle at 0 0, rgb(150, 150, 150), rgb(121, 121, 121) 50px);
+  background: radial-gradient(circle, rgb(80, 80, 80), gray);
 }
 
 .navbar {
@@ -46,7 +55,7 @@
 }
 .navbar .links a:hover {
   color: #FF8A56;
-  transition: 0.5s;
+  transition: background 0.5s ease-out;
   text-shadow: 2px 2px 15px goldenrod;
   cursor: pointer;
 }
@@ -84,7 +93,7 @@ header .headerLeft .headerButtons .book {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: 0.5s;
+  transition: background 0.5s ease-out;
   cursor: pointer;
   margin-right: 40px;
 }
@@ -96,7 +105,7 @@ header .headerLeft .headerButtons .book:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: 0.5s;
+  transition: background 0.5s ease-out;
   cursor: pointer;
 }
 header .headerLeft .headerButtons .CV {
@@ -107,7 +116,7 @@ header .headerLeft .headerButtons .CV {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: 0.5s;
+  transition: background 0.5s ease-out;
   cursor: pointer;
   background-color: grey;
 }
@@ -119,7 +128,7 @@ header .headerLeft .headerButtons .CV:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: 0.5s;
+  transition: background 0.5s ease-out;
   cursor: pointer;
 }
 header .headerLeft .headerButtons img {
@@ -255,7 +264,7 @@ header .headerLeft .headerButtons img {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: 0.5s;
+  transition: background 0.5s ease-out;
   cursor: pointer;
 }
 .projects .page-title {
@@ -335,7 +344,7 @@ header .headerLeft .headerButtons img {
 }
 .blogs .blogs_info .info .view:hover {
   color: #FF8A56;
-  transition: 0.5s;
+  transition: background 0.5s ease-out;
   text-shadow: 2px 2px 15px goldenrod;
   cursor: pointer;
 }
@@ -365,7 +374,7 @@ header .headerLeft .headerButtons img {
 }
 .blogs .blogs_info .news .read:hover {
   color: #FF8A56;
-  transition: 0.5s;
+  transition: background 0.5s ease-out;
   text-shadow: 2px 2px 15px goldenrod;
   cursor: pointer;
 }
@@ -512,21 +521,22 @@ header .headerLeft .headerButtons img {
   grid-area: block;
 }
 
-.faq {
+.faq__ {
   width: 1440px;
   background-color: #000;
   margin-top: 160px;
   height: 100%;
 }
-.faq .faqBlock {
+.faq__ .faqBlock__ {
   width: 1215px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-bottom: 120px;
 }
-.faq .faqBlock .title {
+.faq__ .faqBlock__ .title__ {
   padding-top: 60px;
   padding-bottom: 20px;
   color: #FF8A56;
@@ -534,8 +544,76 @@ header .headerLeft .headerButtons img {
   font-size: 22px;
   letter-spacing: 4px;
 }
-.faq .faqBlock .subtitle {
+.faq__ .faqBlock__ .subtitle__ {
   font-size: 54px;
   font-weight: bold;
   letter-spacing: 1px;
+}
+.faq__ .faq {
+  max-width: 1215px;
+  margin: 20px auto;
+  display: grid;
+  grid-template: repeat(4, auto)/repeat(2, 1fr);
+  grid-gap: 10px;
+  align-items: center;
+}
+.faq__ .faq-item {
+  border: 1px solid #FF8A56;
+  margin-bottom: 5px;
+}
+.faq__ .faq-title {
+  display: block;
+  cursor: pointer;
+  padding: 10px 15px;
+  transition: background 0.2s ease-out;
+  position: relative;
+}
+.faq__ .faq-title:hover {
+  background-color: #FF8A56;
+}
+.faq__ .faq-title::after {
+  content: "";
+  display: block;
+  border-style: solid;
+  border-width: 8px 5px 0 5px;
+  border-color: #fff transparent transparent transparent;
+  transform: rotate(0deg);
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+}
+.faq__ .faq-input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+.faq__ .faq-input:checked ~ .faq-title {
+  background-color: #FF8A56;
+}
+.faq__ .faq-input:checked ~ .faq-title::after {
+  border-style: solid;
+  border-width: 0 5px 8px 5px;
+  border-color: transparent transparent #FFFFFF transparent;
+  transform: rotate(0deg);
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+}
+.faq__ .faq-input:checked ~ .faq-text {
+  display: block;
+}
+.faq__ .faq-text {
+  display: none;
+  font-size: 14px;
+  padding: 10px 15px;
+}
+
+footer {
+  width: 1440px;
+  height: 100%;
+  background-color: #000;
 }/*# sourceMappingURL=main.css.map */
