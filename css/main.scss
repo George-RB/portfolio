@@ -18,12 +18,14 @@ p {
 }
 
 //Mixins
-@mixin orangeColor {
-    color: #FF8A56;
-}
+// @mixin orangeColor {
+//     color: #FF8A56;
+// }
+$orangeColor: #FF8A56;
 
 @mixin hoverOrangeEffect {
-    @include orangeColor;
+    // @include orangeColor;
+    color: $orangeColor;
     transition: .1s ease-out;
     text-shadow: 2px 2px 15px goldenrod;
     cursor: pointer;
@@ -39,15 +41,20 @@ p {
     align-items: center;
     justify-content: center;
     transition: background .5s ease-out;
-
     cursor: pointer;
-
 }
 
 @mixin titleLarge {
-    font-size: 54px;
-    font-weight: bold;
+
+    // font-size: 54px;
+    // font-weight: bold;
+    font: {
+        size: 54px;
+        weight: bold;
+    }
 }
+
+
 
 
 .container {
@@ -61,7 +68,7 @@ p {
     margin: 0 auto;
     flex-wrap: wrap;
     // background: radial-gradient(circle, rgb(80, 80, 80), gray);
-    background: gray;
+    // background: gray;
 
 }
 
@@ -75,7 +82,8 @@ p {
     justify-content: space-between;
 
     p {
-        font-size: 28px;
+        // font-size:  28px;
+        font-size: clamp(28px, 1.45vh, 2.6vh);
         font-weight: bold;
     }
 
@@ -87,7 +95,8 @@ p {
             margin-left: 40px;
             display: flex;
             align-items: center;
-            font-size: 18px;
+            // font-size: 18px;
+            font-size: clamp(14px, 0.729vh, 1.45vh);
 
             img {
                 margin-left: 7px;
@@ -116,7 +125,9 @@ header {
 
     .headerLeft {
         h1 {
-            @include orangeColor;
+            // @include orangeColor;
+            color: $orangeColor;
+
             font-size: 72px;
         }
 
@@ -134,24 +145,26 @@ header {
         .headerButtons {
             display: flex;
             align-items: center;
-
+            justify-content: start;
 
 
             .book {
                 @include blackButton;
                 margin-right: 40px;
                 // background-color: grey;
+                background-color: #fff;
+                border: 0.1rem solid #000;
             }
 
             .book:hover {
                 @include blackButton;
-
             }
 
 
             .CV {
                 @include blackButton;
-                background-color: grey;
+                border: 1px solid #000;
+                background-color: #fff;
             }
 
             .CV:hover {
@@ -310,12 +323,32 @@ header {
         @include titleLarge;
     }
 
+    // .button {
+    //     @include blackButton;
+
+
+    // }
+    // .button :not(:hover) {
+    //     @include blackButton();
+    // }
+
+
+
     .button {
         @include blackButton;
-       
+        background-color: #fff;
+        border: 1px solid #000;
+        // transform: scale(1.1);
     }
+
     .button:hover {
-        @include hoverOrangeEffect();
+        @include blackButton;
+
+    }
+
+    .button::before {
+        // @include blackButton;}
+        background-color: #000;
     }
 
 
@@ -438,15 +471,13 @@ header {
                 padding-bottom: 41px;
             }
 
-            .read {
+            .read p {
                 font-size: 18px;
                 font-weight: bold;
                 padding-bottom: 38px;
-
-
             }
 
-            .read:hover {
+            .read p:hover {
                 @include hoverOrangeEffect;
             }
         }
@@ -820,12 +851,13 @@ footer {
 
         .about {
             display: grid;
-            grid-template: repeat(3,1fr)/repeat(3,1fr);
+            grid-template: repeat(3, 1fr)/repeat(3, 1fr);
             align-items: center;
             justify-items: start;
             width: 485px;
             height: 134px;
 
+            margin-bottom: 200px;
 
             :hover {
                 @include hoverOrangeEffect();
@@ -833,3 +865,5 @@ footer {
         }
     }
 }
+
+@media screen and (max-width: 768px) {}
