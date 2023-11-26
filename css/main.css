@@ -45,17 +45,6 @@
   transform: scale(1.1);
 }
 
-.container {
-  width: 1440px;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto;
-  flex-wrap: wrap;
-}
-
 header {
   display: flex;
   align-items: center;
@@ -320,6 +309,17 @@ header .headerLeft .headerButtons img {
 }
 .projects .next-button {
   right: 10px;
+}
+
+.container {
+  width: 1440px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  flex-wrap: wrap;
 }
 
 .blogs {

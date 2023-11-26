@@ -1,0 +1,130 @@
+@import "_variables";
+@import "_mixin";
+
+
+//Navbar
+.navbar {
+
+    display: flex;
+    align-items: center;
+    width: 1215px;
+    height: 81px;
+    justify-content: space-between;
+
+    p {
+        font-size: clamp(28px, 1.45vh, 2.6vh);
+        font-weight: bold;
+    }
+
+    .links {
+        display: flex;
+
+        a {
+            margin-left: 40px;
+            display: flex;
+            align-items: center;
+            font-size: clamp(14px, 0.729vh, 1.45vh);
+
+            img {
+                margin-left: 7px;
+            }
+
+            text-decoration: none;
+        }
+
+        a:hover {
+            @include hoverOrangeEffect;
+        }
+
+    }
+}
+
+//Header
+header {
+    display: flex;
+    align-items: center;
+    width: 1215px;
+    margin-top: 85px;
+
+    flex-basis: 100px;
+    flex-grow: 1;
+    flex-shrink: 1;
+
+    .headerLeft {
+        h1 {
+            color: $orangeColor;
+            font-size: 72px;
+        }
+
+        h2 {
+            font-size: 72px;
+            margin-bottom: 15px;
+
+        }
+
+        p {
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+
+        .headerButtons {
+            display: flex;
+            align-items: center;
+            justify-content: start;
+
+
+            .book {
+                @include blackButton;
+                margin-right: 40px;
+                background-color: #fff;
+                border: 0.1rem solid #000;
+            }
+
+            .book:hover {
+                @include blackButton;
+            }
+
+
+            .CV {
+                @include blackButton;
+                border: 1px solid #000;
+                background-color: #fff;
+            }
+
+            .CV:hover {
+                @include blackButton;
+
+            }
+
+
+            img {
+                width: 14px;
+                height: 14px;
+                padding-left: 24px;
+            }
+        }
+    }
+}
+
+//Sponsors
+.sponsors {
+    width: 1000px;
+    height: 252px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .title {
+        padding-bottom: 45px;
+        font-size: 18px;
+    }
+
+    img {
+        margin-left: 100px;
+    }
+
+    #fisrtItem {
+        margin-left: 0; // Ужасный костыль, нужно узнать как сделать этот трюк нормально
+    }
+}
