@@ -1,0 +1,29 @@
+@import "_variables";
+
+@mixin hoverOrangeEffect {
+    color: $orangeColor;
+    transition: .1s ease-out;
+    text-shadow: 2px 2px 15px goldenrod;
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+@mixin blackButton {
+    width: 160px;
+    height: 58px;
+    border: 0 solid #000;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background .5s ease-out;
+    cursor: pointer;
+}
+
+@mixin titleLarge {
+    font: {
+        size: 54px;
+        weight: bold;
+    }
+}
+

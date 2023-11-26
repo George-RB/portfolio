@@ -1,0 +1,14 @@
+* {
+    border: none;
+    margin: 0;
+    padding: 0;
+    // background-color: grey;
+    color: lightgray;
+    font-family: 'Roboto', sans-serif;
+    cursor: default;
+}
+
+*::before,
+*::after {
+    box-sizing: border-box;
+}

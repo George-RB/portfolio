@@ -1,65 +1,12 @@
-* {
-    border: none;
-    margin: 0;
-    padding: 0;
-    // background-color: grey;
-    color: lightgray;
-    font-family: 'Roboto', sans-serif;
-    cursor: default;
-}
-
-*::before,
-*::after {
-    box-sizing: border-box;
-}
-
-p {
-    margin: 0 0 5px;
-}
-
-//Mixins
-// @mixin orangeColor {
-//     color: #FF8A56;
-// }
-$orangeColor: #FF8A56;
-
-@mixin hoverOrangeEffect {
-    // @include orangeColor;
-    color: $orangeColor;
-    transition: .1s ease-out;
-    text-shadow: 2px 2px 15px goldenrod;
-    cursor: pointer;
-    transform: scale(1.1);
-}
-
-@mixin blackButton {
-    width: 160px;
-    height: 58px;
-    border: 0 solid #000;
-    background-color: #000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background .5s ease-out;
-    cursor: pointer;
-}
-
-@mixin titleLarge {
-
-    // font-size: 54px;
-    // font-weight: bold;
-    font: {
-        size: 54px;
-        weight: bold;
-    }
-}
-
+@import "_mixin";
+@import "_variables";
+@import "_reset";
+@import "_navbar";
 
 
 
 .container {
     width: 1440px;
-    // width: 100%; // potom ubrat`?
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -67,50 +14,9 @@ $orangeColor: #FF8A56;
     justify-content: center;
     margin: 0 auto;
     flex-wrap: wrap;
-    // background: radial-gradient(circle, rgb(80, 80, 80), gray);
-    // background: gray;
-
 }
 
-//Navbar
-.navbar {
 
-    display: flex;
-    align-items: center;
-    width: 1215px;
-    height: 81px;
-    justify-content: space-between;
-
-    p {
-        // font-size:  28px;
-        font-size: clamp(28px, 1.45vh, 2.6vh);
-        font-weight: bold;
-    }
-
-    .links {
-        display: flex;
-
-        // height: 28px;
-        a {
-            margin-left: 40px;
-            display: flex;
-            align-items: center;
-            // font-size: 18px;
-            font-size: clamp(14px, 0.729vh, 1.45vh);
-
-            img {
-                margin-left: 7px;
-            }
-
-            text-decoration: none;
-        }
-
-        a:hover {
-            @include hoverOrangeEffect;
-        }
-
-    }
-}
 
 //Header
 header {
@@ -720,7 +626,7 @@ header {
         display: grid;
         grid-template: repeat(4, auto)/repeat(2, 1fr);
         grid-gap: 10px;
-        align-items: center;
+        align-items: end;
     }
 
     .faq-item {
