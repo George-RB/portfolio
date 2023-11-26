@@ -1,0 +1,121 @@
+@import "_mixin";
+
+// FAQ
+
+.faq-bgcolor {
+    background: linear-gradient(gray, black);
+    height: 6vh;
+}
+
+.faq__ {
+    width: 1440px;
+    background-color: #000;
+    margin-top: 160px;
+    height: 100%;
+    // box-shadow: 0 10px 6px 15px #000;
+    // height: 811px;
+    // height: 428px;
+
+
+    .faqBlock__ {
+        width: 1215px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 120px;
+
+        .title__ {
+            padding-top: 60px;
+            padding-bottom: 20px;
+            color: #FF8A56;
+            font-weight: bold;
+            font-size: 22px;
+            letter-spacing: 4px;
+        }
+
+        .subtitle__ {
+            font-size: 54px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+    }
+
+
+
+    // faq
+
+    .faq {
+        max-width: 1215px;
+        // height: 428px;
+        margin: 20px auto;
+        display: grid;
+        grid-template: repeat(4, auto)/repeat(2, 1fr);
+        grid-gap: 10px;
+        align-items: end;
+    }
+
+    .faq-item {
+        border: 1px solid #FF8A56;
+        margin-bottom: 5px;
+    }
+
+    .faq-title {
+        display: block;
+        cursor: pointer;
+        padding: 10px 15px;
+        transition: background .2s ease-out;
+        position: relative;
+    }
+
+    .faq-title:hover {
+        background-color: #FF8A56;
+    }
+
+    .faq-title::after {
+        content: "";
+        display: block;
+        border-style: solid;
+        border-width: 8px 5px 0 5px;
+        border-color: #fff transparent transparent transparent;
+        transform: rotate(0deg);
+        position: absolute;
+        top: 50%;
+        right: 15px;
+        transform: translateY(-50%);
+    }
+
+    .faq-input {
+        appearance: none;
+        position: absolute;
+        width: 0;
+        height: 0;
+    }
+
+    .faq-input:checked~.faq-title {
+        background-color: #FF8A56;
+    }
+
+    .faq-input:checked~.faq-title::after {
+        border-style: solid;
+        border-width: 0 5px 8px 5px;
+        border-color: transparent transparent #FFFFFF transparent;
+        transform: rotate(0deg);
+        top: 50%;
+        right: 15px;
+        transform: translateY(-50%);
+    }
+
+    .faq-input:checked~.faq-text {
+        display: block;
+    }
+
+    .faq-text {
+        display: none;
+        font-size: 14px;
+        padding: 10px 15px;
+
+    }
+
+}

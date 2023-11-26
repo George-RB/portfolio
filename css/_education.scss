@@ -1,0 +1,56 @@
+@import "_mixin";
+
+// Education
+.education {
+    margin-top: 160px;
+    width: 1215px;
+
+    display: grid;
+    grid-template: repeat(1, 1fr)/repeat(2, 1fr);
+    grid-gap: 50px;
+
+    .educationInfo {
+        width: 583px;
+
+        .educationSchool {
+            height: 94px;
+            border-bottom: 1px solid #555;
+            display: grid;
+            grid-template: repeat(2, 1fr)/repeat(2, 1fr);
+            grid-template-areas: "title subtitle"
+                "text subtext";
+            align-items: stretch;
+            justify-items: start;
+            margin-bottom: 35px;
+
+        }
+
+        .educationTitle {
+            font-size: 36px;
+            color: #000;
+            padding-bottom: 85px;
+            grid-area: title;
+        }
+
+        .schoolTitle {
+            font-size: 24px;
+            font-weight: bold;
+            color: #000;
+            padding-bottom: 9px;
+        }
+
+        .schoolSubtitle {
+            color: #000;
+            opacity: 0.6;
+            grid-area: text;
+        }
+
+        .schoolYear {
+            grid-area: subtext;
+            color: #000;
+            opacity: 0.6;
+            justify-self: end;
+
+        }
+    }
+}

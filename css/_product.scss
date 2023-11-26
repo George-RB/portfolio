@@ -1,0 +1,70 @@
+@import "_mixin";
+
+// Product
+.product {
+    width: 1440px;
+
+    .product_item {
+        width: 1215px;
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+
+        .button {
+            width: 620px;
+            height: 120px;
+            line-height: 40px;
+            font-size: 22px;
+            color: #666666;
+        }
+    }
+
+    .product_title {
+        width: 590px;
+        margin-bottom: 115px;
+
+
+        .title {
+            color: #FF5E69;
+            margin: 80px 0 16px;
+            font-size: 22px;
+            letter-spacing: 4px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .text {
+            // text-align: center;
+            @include titleLarge;
+            color: #000;
+        }
+    }
+
+    .productPictures {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        // align-items: stretch;
+        grid-gap: 10px;
+        width: 1215px;
+        margin: 0 auto;
+        grid-template-areas: "img pic block"
+            "img pic layer";
+
+        .design_1 {
+            grid-area: img;
+        }
+
+        .design_2 {
+            grid-area: pic;
+        }
+
+        .design_3 {
+            grid-area: block;
+        }
+
+        .design_4 {
+            grid-area: layer;
+        }
+    }
+}
