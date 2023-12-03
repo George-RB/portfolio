@@ -29,6 +29,14 @@
 
     .text {
         @include titleLarge;
+
+    }
+    .animated-element {
+        transform: translateX(100px);
+        transition: transform 2s ease-in-out;
+        @include titleLarge;
+        @include slideText;
+
     }
 
     // .button {

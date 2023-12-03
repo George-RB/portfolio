@@ -16,6 +16,7 @@
             line-height: 40px;
             font-size: 22px;
             color: #666666;
+            // @include slideText;
         }
     }
 
@@ -53,10 +54,12 @@
 
         .design_1 {
             grid-area: img;
+            // @include aBlink;
         }
 
         .design_2 {
             grid-area: pic;
+            // @include aBlink_2;
         }
 
         .design_3 {

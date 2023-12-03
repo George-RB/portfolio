@@ -3,16 +3,19 @@
 @mixin hoverOrangeEffect {
     color: $orangeColor;
     transition: .1s ease-out;
-    text-shadow: 2px 2px 15px goldenrod;
+    // transition: font-size 0.3s ease;
+    text-shadow: 2px 2px 15px $orangeColor;
     cursor: pointer;
-    transform: scale(1.1);
+    // transform: scale(1.2);
+    // font-size: clamp(16px, 2em, 32px);
+
 }
 
 @mixin blackButton {
     width: 160px;
     height: 58px;
-    border: 0 solid #000;
-    background-color: #000;
+    border: 0 solid black;
+    background-color: black;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -27,3 +30,104 @@
     }
 }
 
+@mixin aShow {
+    @keyframes animaText {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    animation-name: animaText;
+    animation-duration: 3s;
+    animation-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@mixin aBounce {
+    @keyframes pulse {
+
+        0%,
+        100% {
+            transform: scale(1);
+        }
+
+        50% {
+            transform: scale(1.2);
+        }
+    }
+
+
+    animation-name: pulse;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+
+}
+
+@mixin aBlink {
+    @keyframes blinkA {
+
+        0%,
+        100% {
+            opacity: 1;
+        }
+
+        50% {
+            opacity: 0;
+        }
+    }
+
+    animation-name: blinkA;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+}
+
+@mixin aBlink_2 {
+    @keyframes diagonalMove {
+        0% {
+            transform: translate(0, 0);
+        }
+
+        50% {
+            transform: translate(-50px, -10px);
+        }
+
+        100% {
+            transform: translate(0, 0);
+        }
+    }
+
+    animation-name: diagonalMove;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+
+
+}
+
+@mixin slideText {
+
+      
+      @keyframes slidein {
+        from {
+          margin-left: 100%;
+          width: 300%;
+        }
+      
+        to {
+          margin-left: 0%;
+          width: 100%;
+        }
+      }
+      animation-duration: 3s;
+      animation-name: slidein;
+      
+}

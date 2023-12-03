@@ -40,9 +40,8 @@
 .navbar .links a:hover {
   color: #FF8A56;
   transition: 0.1s ease-out;
-  text-shadow: 2px 2px 15px goldenrod;
+  text-shadow: 2px 2px 15px #FF8A56;
   cursor: pointer;
-  transform: scale(1.1);
 }
 
 header {
@@ -57,6 +56,34 @@ header {
 header .headerLeft h1 {
   color: #FF8A56;
   font-size: 72px;
+  -webkit-animation-name: animaText;
+          animation-name: animaText;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+          animation-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+@-webkit-keyframes animaText {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes animaText {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 header .headerLeft h2 {
   font-size: 72px;
@@ -74,22 +101,22 @@ header .headerLeft .headerButtons {
 header .headerLeft .headerButtons .book {
   width: 160px;
   height: 58px;
-  border: 0 solid #000;
-  background-color: #000;
+  border: 0 solid black;
+  background-color: black;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: background 0.5s ease-out;
   cursor: pointer;
   margin-right: 40px;
-  background-color: #fff;
-  border: 0.1rem solid #000;
+  background-color: white;
+  border: 0.1rem solid black;
 }
 header .headerLeft .headerButtons .book:hover {
   width: 160px;
   height: 58px;
-  border: 0 solid #000;
-  background-color: #000;
+  border: 0 solid black;
+  background-color: black;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -99,21 +126,21 @@ header .headerLeft .headerButtons .book:hover {
 header .headerLeft .headerButtons .CV {
   width: 160px;
   height: 58px;
-  border: 0 solid #000;
-  background-color: #000;
+  border: 0 solid black;
+  background-color: black;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: background 0.5s ease-out;
   cursor: pointer;
-  border: 1px solid #000;
-  background-color: #fff;
+  border: 1px solid black;
+  background-color: white;
 }
 header .headerLeft .headerButtons .CV:hover {
   width: 160px;
   height: 58px;
-  border: 0 solid #000;
-  background-color: #000;
+  border: 0 solid black;
+  background-color: black;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -125,7 +152,6 @@ header .headerLeft .headerButtons img {
   height: 14px;
   padding-left: 24px;
 }
-
 .sponsors {
   width: 1000px;
   height: 252px;
@@ -183,11 +209,34 @@ header .headerLeft .headerButtons img {
   height: 381px;
   display: flex;
   flex-direction: column;
-  /* align-items: flex-start; */
   justify-content: initial;
 }
 .services .info .block .logo {
   margin-bottom: 30px;
+  -webkit-animation-name: pulse;
+          animation-name: pulse;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+@-webkit-keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
 }
 .services .info .block h1 {
   margin-bottom: 25px;
@@ -207,6 +256,12 @@ header .headerLeft .headerButtons img {
   padding-left: 30px;
   margin-bottom: 10px;
 }
+.services .info .block li:hover {
+  color: #FF8A56;
+  transition: 0.1s ease-out;
+  text-shadow: 2px 2px 15px #FF8A56;
+  cursor: pointer;
+}
 .services .info .block li:before {
   content: "";
   position: absolute;
@@ -215,7 +270,7 @@ header .headerLeft .headerButtons img {
   transform: translateY(-50%);
   width: 7px;
   height: 7px;
-  background-color: #000;
+  background-color: black;
   /* цвет квадрата */
 }
 
@@ -245,11 +300,41 @@ header .headerLeft .headerButtons img {
   font-size: 54px;
   font-weight: bold;
 }
+.projects .animated-element {
+  transform: translateX(100px);
+  transition: transform 2s ease-in-out;
+  font-size: 54px;
+  font-weight: bold;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-name: slidein;
+          animation-name: slidein;
+}
+@-webkit-keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
 .projects .button {
   width: 160px;
   height: 58px;
-  border: 0 solid #000;
-  background-color: #000;
+  border: 0 solid black;
+  background-color: black;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -261,8 +346,8 @@ header .headerLeft .headerButtons img {
 .projects .button:hover {
   width: 160px;
   height: 58px;
-  border: 0 solid #000;
-  background-color: #000;
+  border: 0 solid black;
+  background-color: black;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -350,9 +435,8 @@ header .headerLeft .headerButtons img {
 .blogs .blogs_info .info .view:hover {
   color: #FF8A56;
   transition: 0.1s ease-out;
-  text-shadow: 2px 2px 15px goldenrod;
+  text-shadow: 2px 2px 15px #FF8A56;
   cursor: pointer;
-  transform: scale(1.1);
 }
 .blogs .blogs_info .news_item {
   width: 692px;
@@ -381,9 +465,8 @@ header .headerLeft .headerButtons img {
 .blogs .blogs_info .news .read p:hover {
   color: #FF8A56;
   transition: 0.1s ease-out;
-  text-shadow: 2px 2px 15px goldenrod;
+  text-shadow: 2px 2px 15px #FF8A56;
   cursor: pointer;
-  transform: scale(1.1);
 }
 
 .product {
@@ -681,9 +764,8 @@ footer .wrapper-footer .about {
 footer .wrapper-footer .about :hover {
   color: #FF8A56;
   transition: 0.1s ease-out;
-  text-shadow: 2px 2px 15px goldenrod;
+  text-shadow: 2px 2px 15px #FF8A56;
   cursor: pointer;
-  transform: scale(1.1);
 }
 
 .container {
@@ -695,4 +777,10 @@ footer .wrapper-footer .about :hover {
   justify-content: center;
   margin: 0 auto;
   flex-wrap: wrap;
+}
+
+@media screen and (max-width: 320px) {
+  .navbar .links a {
+    display: none;
+  }
 }/*# sourceMappingURL=main.css.map */
